@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Drish Bhandari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fadeIn { animation: fadeIn 1s ease-out; }
+
+        @keyframes bounceOnLoad {
+            0% { transform: scale(0.9); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-bounceOnLoad { animation: bounceOnLoad 0.8s ease-out; }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slideUp { animation: slideUp 1s ease-out; }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #5e447a, #62718b, #ff7e5f);
+            background-size: 200% 200%;
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #6a11cb, #ff7e5f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-hover {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .card-hover:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-700 text-gray-900">
+    
+    <!-- Navbar -->
+    <nav class="gradient-bg shadow-md py-4 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-extrabold text-white">DRISH BHANDARI</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-white hover:text-gray-300 transition duration-300">About</a></li>
+                <li><a href="#skills" class="text-white hover:text-gray-300 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="text-white hover:text-gray-300 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center text-white gradient-bg animate-fadeIn" style="background-image: url('pexels-danbuilds-633409.jpg');">
+        <h1 class="text-6xl font-extrabold text-gradient animate-bounceOnLoad">Hi, I'm Your DRISH</h1>
+        <p class="text-xl mt-4 bg-black bg-opacity-50 px-4 py-2 rounded">A Passionate IT Student specializing in Web Development & Data Analytics</p>
+        <a href="#projects" class="mt-6 px-6 py-3 bg-white text-purple-600 font-bold rounded-full hover-grow">View My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-16 px-6 text-center">
+        <h2 class="text-4xl font-extrabold text-gradient mb-6">About Me</h2>
+        <p class="text-lg mt-6 text-gray-300 max-w-2xl mx-auto">
+            I am a 3rd-year B.Tech IT student at Silver Oak University, passionate about Web Development, Data Analytics, and Emerging Technologies.
+            I'm always eager to explore new skills and collaborate on exciting projects. I'm also an avid traveler who believes that experiencing new cultures enhances creativity and problem-solving skills.
+        </p>
+    </section>
+
+<!-- Achievements & Certificates -->
+    <section id="achievements" class="container mx-auto py-16 px-6 bg-gray-100 bg-contain " style="background-image: url('premium_photo-1677572452827-899002f7ca12.avif');">
+        <h2 class="text-4xl font-extrabold text-center text-gradient">Achievements & Certifications</h2>
+        
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+ <!-- Certification 1 -->
+<div class="p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h3 class="text-xl font-semibold text-purple-600">Winter Certification Program - Data Analytics</h3>
+    <p class="text-gray-700 mt-2">IBM SkillsBuild Winter Certification Program - Data Analytics: Turning Data into Decisions using Python.</p>
+</div>
+
+<!-- Certification 2 -->
+<div class="p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h3 class="text-xl font-semibold text-teal-600">Skilling Course on Cybersecurity</h3>
+    <p class="text-gray-700 mt-2">A course offered by Tech Mahindra Foundation through Skill India Digital Hub.</p>
+</div>
+
+<!-- Certification 3 -->
+<div class="p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h3 class="text-xl font-semibold text-orange-600">Skilling Course on Python Programming</h3>
+    <p class="text-gray-700 mt-2">A course offered by NSDC through Skill India Digital Hub.</p>
+</div>
+
+<!-- Certification 4 -->
+<div class="p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h3 class="text-xl font-semibold text-purple-600">Global Job Readiness Program</h3>
+    <p class="text-gray-700 mt-2">Deakin University Global Job Readiness Program (Intermediate Level) offered by DeakinCo.</p>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gray-900 py-16 px-6 text-center">
+        <h2 class="text-4xl font-extrabold text-gradient mb-6">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">HTML</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">CSS</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">JavaScript</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">C</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">Python</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">Java</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">MySQL</span>
+            <span class="bg-gray-800 py-3 px-6 rounded-lg text-white text-xl shadow-lg hover-grow">Figma</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto py-16 px-6 ">
+        <h2 class="text-4xl font-extrabold text-gradient text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-gray-200 p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad">
+                <h3 class="text-xl font-bold text-purple-600">Website Clone</h3>
+                <p class="mt-2">SecureWave: A website providing security solutions.</p>
+                <a href="https://drish-bhandari.github.io/AWDP/" class="text-purple-600 font-bold">View Project</a>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg card-shadow card-hover animate-bounceOnLoad">
+                <h3 class="text-xl font-bold text-teal-600">Ecommerce Website Clone</h3>
+                <p class="mt-2">Ecommerce website clone using HTML CSS.</p>
+                <a href=" https://drish-bhandari.github.io/Ecommerce_clone/" class="text-teal-600 font-bold">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-16 px-6 gradient-bg text-white bg-contain" style="background-image: url('photo-1484807352052-23338990c6c6.avif'); animation: fadeIn 2s ease-in-out;">
+        <h2 class="text-4xl font-extrabold text-center">Contact Me</h2>
+        
+        <div class="mt-8 flex flex-col md:flex-row items-center justify-between">
+            <!-- Contact Info -->
+            <div class="text-center md:text-left">
+                <p class="text-lg mt-4"><strong>Email:</strong> bhandaridrish@gmail.com</p>
+                <p class="text-lg mt-2"><strong>Phone:</strong> +91 9512464858</p>
+                <p class="text-lg mt-2"><strong>Location:</strong> Ahmedabad, India</p>
+                
+                <!-- Social Media Links -->
+                <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                    <a href="www.linkedin.com/in/drish-bhandari-a615b4322" target="_blank">
+                        <img src="linkedin-icon.png" alt="LinkedIn" class="w-8 h-8">
+                    </a>
+                    <a href="https://github.com/Drish-Bhandari" target="_blank">
+                        <img src="github-icon.png" alt="GitHub" class="w-8 h-8">
+                    </a>
+                    <a href="https://x.com/bhandari_drish?t=6D2LHrXl3QuVRIac8Txtnw&s=09" target="_blank">
+                        <img src="twitter-icon.png" alt="Twitter" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="mt-8 md:mt-0 bg-gray-100 text-black p-6 rounded-lg shadow-lg w-full md:w-1/2 animate-slideUp">
+                <div class="mb-4">
+                    <label class="block text-lg font-semibold">Name</label>
+                    <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-lg font-semibold">Email</label>
+                    <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-lg font-semibold">Message</label>
+                    <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded-lg"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-purple-900 text-white font-bold py-3 rounded-lg hover:bg-purple-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white text-center py-4">
+        <p>&copy; 2025 drish-bhandari. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
